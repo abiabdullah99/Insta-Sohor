@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+        <a class="navbar-brand" href="#">Insta-Sohor</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li
+              class="nav-link active"
+              role="button"
+              onclick="switchTab( 'posts' )"
+            >
+              <i class="fa-solid fa-house"></i>
+            </li>
+
+            <li
+              class="nav-link active"
+              role="button"
+              onclick="switchTab( 'liked' )"
+            >
+              <i class="fa-solid fa-heart text-danger"></i>
+            </li>
+
+            <li
+              class="nav-link active"
+              role="button"
+              onclick="switchTab( 'reported' )"
+            >
+              <i class="fa-solid fa-eye-slash"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+      <div id="posts"></div>
+      <div id="liked">
+        <h1>Liked posts</h1>
+      </div>
+
+      <div id="reported">
+        <h1>Reported posts</h1>
+      </div>
+    </main>
+    
+    <!-- Bonus Part  -->
+    <section class="text-title" id="text-content">
+      <h1>সেশন স্টোরেজ এবং লোকাল স্টোরেজ মধ্যে পার্থক্য ?</h1>
+      <h2>সেশন স্টোরেজ</h2>
+      <p>1 সেশন স্টোরেজের স্টোরেজ ক্ষমতা 5MB</p>
+      <p>
+        2 একটি DOMString সংখ্যা হল UTF-16 DOMString বিন্যাসে প্রতি অক্ষর প্রতি
+        দুই বাইট।
+      </p>
+      <p>
+        3 একটি উইন্ডো/ট্যাব বন্ধ করলে সেশন শেষ হয় এবং সেশন স্টোরেজ অবজেক্টগুলি
+        সাফ হয়
+      </p>
+      <h2>লোকাল স্টোরেজ</h2>
+      <p>1 স্থানীয় স্টোরেজের স্টোরেজ ক্ষমতা 5MB/10MB</p>
+      <p>
+        2 DOMStrings হল স্টোরেজ ফরম্যাট যা ডেটা এনকোড করতে UTF-16 ব্যবহার করে,
+        যা প্রতি অক্ষর দুটি বাইট ব্যবহার করে
+      </p>
+      <p>
+        3 একটি ব্রাউজারের শেষ "ব্যক্তিগত" ট্যাবটি বন্ধ হয়ে গেলে এটি সাফ করা হয়
+        (একটি ব্যক্তিগত ব্রাউজিং বা ছদ্মবেশী সেশনে লোড হওয়া একটি নথির জন্য
+        স্থানীয় স্টোরেজ ডেটা)।
+      </p>
+      <h1>Js এর event loop টা কি কাজ করে ?</h1>
+      <p>
+        ইভেন্ট লুপ হল একটি প্রোগ্রামিং গঠন বা ডিজাইন প্যাটার্ন যা একটি
+        প্রোগ্রামে ইভেন্ট বা বার্তাগুলির জন্য অপেক্ষা করে এবং প্রেরণ করে ।
+        ইভেন্ট লুপ কিছু অভ্যন্তরীণ বা বাহ্যিক "ইভেন্ট প্রদানকারী" এর কাছে একটি
+        অনুরোধ করে কাজ করে (যা সাধারণত একটি ইভেন্ট না আসা পর্যন্ত অনুরোধটিকে
+        ব্লক করে), তারপর প্রাসঙ্গিক ইভেন্ট হ্যান্ডলারকে কল করে ("ইভেন্টটি প্রেরণ
+        করে")। ইভেন্ট লুপকে কখনও কখনও বার্তা প্রেরণকারী , বার্তা লুপ , বার্তা
+        পাম্প বা রান লুপ হিসাবেও উল্লেখ করা হয় । জাভাস্ক্রিপ্টের একটি ইভেন্ট
+        লুপের উপর ভিত্তি করে একটি রানটাইম মডেল রয়েছে, যা কোড চালানো, ইভেন্ট
+        সংগ্রহ ও প্রক্রিয়াকরণ এবং সারিবদ্ধ সাব-টাস্কগুলি কার্যকর করার জন্য
+        দায়ী।
+      </p>
+    </section>
+    <footer></footer>
+
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
